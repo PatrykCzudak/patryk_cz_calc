@@ -27,7 +27,15 @@ def calculate():
         case _:
             return "Błąd: nieznana operacja!", 400
 
-    return f"{arg1} {operator} {arg2} = {result}"
+    better_rozmiar = f"""
+        <html>
+            <body style = "font-size: 150px;">
+                {arg1} {operator} {arg2} = {result}
+            </body>
+        </html>
+    """
+    
+    return better_rozmiar
 
 if __name__ == '__main__':
     app.run(debug=True)
